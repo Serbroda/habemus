@@ -13,9 +13,10 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './pages/home/home.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
+import { CalendarComponent } from './pages/calendar/calendar.component';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent],
+    declarations: [AppComponent, HomeComponent, CalendarComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
