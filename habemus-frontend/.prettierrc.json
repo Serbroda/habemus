@@ -1,7 +1,7 @@
 {
-  "parser": "angular",
+  "parser": "typescript",
   "trailingComma": "es5",
-  "printWidth": 120,
+  "printWidth": 80,
   "tabWidth": 4,
   "useTabs": false,
   "singleQuote": true,
@@ -18,6 +18,12 @@
       "files": ["*.css", "*.scss"],
       "options": {
         "parser": "css"
+      }
+    },
+    {
+      "files": ["*.html"],
+      "options": {
+        "parser": "angular"
       }
     }
   ]
