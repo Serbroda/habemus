@@ -11,25 +11,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './pages/home/home.component';
-import { RouterModule } from '@angular/router';
-import { appRoutes } from './routes';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, CalendarComponent],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatMenuModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatListModule,
-        RouterModule.forRoot(appRoutes),
-    ],
-    providers: [],
-    bootstrap: [AppComponent],
+  declarations: [AppComponent, HomeComponent, CalendarComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
