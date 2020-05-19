@@ -25,7 +25,17 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5638dc9e-18f8-4b6a-a120-dd1ee70f0219" name="Default Changelist" comment="" />
+    <list default="true" id="5638dc9e-18f8-4b6a-a120-dd1ee70f0219" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../habemus-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../habemus-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../habemus-frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../habemus-frontend/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../habemus-frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../habemus-frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../habemus-frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../habemus-frontend/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/src/styles.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,12 +60,32 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../habemus-frontend" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/../habemus-frontend/node_modules/protractor" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="ts.external.directory.path" value="C:\Users\danny\Documents\Workspace\habemus\habemus-frontend\node_modules\typescript\lib" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.Angular Application (habemus-frontend)">
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="HabemusWebappApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="Angular CLI Server (habemus-frontend)" type="js.build_tools.npm" />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (habemus-frontend)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/../habemus-frontend/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/../habemus-frontend/node_modules/protractor" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application (habemus-frontend)" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
     <configuration name="HabemusWebappApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="habemus-webapp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="de.rottstegge.habemus.HabemusWebappApplication" />
@@ -72,6 +102,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Angular CLI Server (habemus-frontend)" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/../habemus-frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Angular Application (habemus-frontend)" />
+      <item itemvalue="npm.Angular CLI Server (habemus-frontend)" />
+      <item itemvalue="Protractor.E2E Tests (habemus-frontend)" />
+      <item itemvalue="Spring Boot.HabemusWebappApplication" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -84,7 +130,9 @@
       <option name="presentableId" value="Default" />
       <updated>1589824749225</updated>
       <workItem from="1589824752779" duration="507000" />
-      <workItem from="1589825273128" duration="590000" />
+      <workItem from="1589825273128" duration="862000" />
+      <workItem from="1589826150030" duration="3319000" />
+      <workItem from="1589902216007" duration="4076000" />
     </task>
     <servers />
   </component>
@@ -120,70 +168,78 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825301746" />
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589825044244">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589826115237">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825044244" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589826115237" />
     <state x="689" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589825025070">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="689" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825025070" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589826435012">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589826435012" />
     <state x="719" y="190" key="FileChooserDialogImpl" timestamp="1589825847740">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="719" y="190" key="FileChooserDialogImpl/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825847740" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1589825442803">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1589902248313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825442803" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1589825442802">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589902248313" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1589902248313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825442802" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1589825442802">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589902248313" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1589902248313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825442802" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1589825442803">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589902248313" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1589902248313">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825442803" />
-    <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1589825442803">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589902248313" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589831053531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.bottom/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825442803" />
-    <state width="1877" height="282" key="GridCell.Tab.1.center" timestamp="1589825442803">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589831053531" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1589831053531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.center/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825442803" />
-    <state width="1877" height="282" key="GridCell.Tab.1.left" timestamp="1589825442803">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589831053531" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1589831053531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.left/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825442803" />
-    <state width="1877" height="282" key="GridCell.Tab.1.right" timestamp="1589825442803">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589831053531" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1589831053531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.right/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825442803" />
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1589825260989">
+    <state width="1877" height="348" key="GridCell.Tab.1.right/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589831053531" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1589831053532">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825260989" />
-    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1589825260989">
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589831053532" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1589831053531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.center/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825260989" />
-    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1589825260989">
+    <state width="1877" height="348" key="GridCell.Tab.2.center/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589831053531" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1589831053531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.left/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825260989" />
-    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1589825260989">
+    <state width="1877" height="348" key="GridCell.Tab.2.left/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589831053531" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1589831053531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.2.right/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825260989" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589831053531" />
     <state x="625" y="224" key="NewModule_or_Project.wizard" timestamp="1589825862992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="625" y="224" key="NewModule_or_Project.wizard/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589825862992" />
+    <state x="639" y="222" key="RollbackChangesDialog" timestamp="1589827111848">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="639" y="222" key="RollbackChangesDialog/-1080.-642.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1589827111848" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1589825378889">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
