@@ -27,9 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5638dc9e-18f8-4b6a-a120-dd1ee70f0219" name="Default Changelist" comment="Add prettier config files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../habemus-frontend/.prettierrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/.prettierrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../habemus-frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../habemus-frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../habemus-frontend/src/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/src/app/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../habemus-frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../habemus-frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +138,7 @@
       <workItem from="1589902216007" duration="4883000" />
       <workItem from="1589918997469" duration="540000" />
       <workItem from="1589919550215" duration="544000" />
-      <workItem from="1589920107919" duration="782000" />
+      <workItem from="1589920107919" duration="1203000" />
     </task>
     <task id="LOCAL-00001" summary="Add main layout">
       <created>1589906332785</created>
@@ -175,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589920670254</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add calendar page">
+      <created>1589920927312</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589920927312</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +217,8 @@
     <MESSAGE value="Add prettier config files" />
     <MESSAGE value="Fix prettier" />
     <MESSAGE value="Add routes and home component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add routes and home component" />
+    <MESSAGE value="Add calendar page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add calendar page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1589825301746">
