@@ -1,0 +1,9 @@
+<mat-toolbar color="primary" [class.shadow]="hasShadow" style="min-height: 56px !important; height: 56px !important;">
+  <mat-toolbar-row>
+    <button mat-icon-button *ngIf="mode == 'over'">
+      <mat-icon (click)="onMenuClick()">menu</mat-icon>
+    </button>
+    <a mat-button [routerLink]="'/'">Home</a>
+    <a mat-button [routerLink]="'/calendar'">Termine</a>
+  </mat-toolbar-row>
+</mat-toolbar>
