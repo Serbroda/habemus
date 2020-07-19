@@ -13,16 +13,14 @@ export class AppComponent {
   opened: boolean = true;
 
   constructor(private breakpointObserver: BreakpointObserver) {
-    this.breakpointObserver
-      .observe(['(max-width: 769px)'])
-      .subscribe((state: BreakpointState) => {
-        if (state.matches) {
-          this.mode = 'over';
-          this.opened = false;
-        } else {
-          this.mode = 'side';
-          this.opened = true;
-        }
-      });
+    this.breakpointObserver.observe(['(max-width: 769px)']).subscribe((state: BreakpointState) => {
+      if (state.matches) {
+        this.mode = 'over';
+        this.opened = false;
+      } else {
+        this.mode = 'side';
+        this.opened = true;
+      }
+    });
   }
 }

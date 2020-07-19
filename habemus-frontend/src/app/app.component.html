@@ -1,12 +1,7 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <button mat-icon-button *ngIf="mode == 'over'">
-      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-    </button>
-    <a mat-button [routerLink]="'/'">Home</a>
-    <a mat-button [routerLink]="'/calendar'">Termine</a>
-  </mat-toolbar-row>
-</mat-toolbar>
+<app-nav
+  mode="{{mode}}"
+  (menuClick)="sidenav.toggle()">
+</app-nav>
 
 <mat-sidenav-container autosize>
   <mat-sidenav

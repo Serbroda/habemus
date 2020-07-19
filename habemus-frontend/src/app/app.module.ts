@@ -12,9 +12,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './pages/home/home.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CalendarComponent],
+  declarations: [AppComponent, HomeComponent, CalendarComponent, NavComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
