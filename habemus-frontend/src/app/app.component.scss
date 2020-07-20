@@ -5,6 +5,10 @@
 
 .sidenav {
   min-width: 230px;
+  & div {
+    font-size: 0.9rem;
+  }
+
 }
 
 .shadow {
