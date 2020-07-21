@@ -4,8 +4,6 @@
     $nh: variables.$navbar-height;
     min-height: calc(100% - #{$nh});
     padding-top: 0px + variables.$navbar-height;
-    padding-left: 24px;
-    padding-right: 24px;
 }
 
 .sidenav {
@@ -17,16 +15,7 @@
     color: blue;
 }
 
-.mat-icon {
-    padding-right: 8px;
-}
-
 .sidenav-header {
     height: variables.$navbar-height;
-    font-weight: bold;
-    font-size: 1.4rem;
-}
-
-.fas {
-    min-width: 25px;
+    font-size: 1.3rem;
 }
