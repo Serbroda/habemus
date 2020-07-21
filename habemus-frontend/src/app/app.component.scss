@@ -1,3 +1,5 @@
+@use "../scss/variables/variables";
+
 .app-content {
     height: calc(100vh - 86px);
     padding: 0px 10px;
@@ -16,7 +18,7 @@
 }
 
 .sidenav-header {
-    height: 56px;
+    height: variables.$navbar-height;
     font-weight: bold;
     font-size: 1.4rem;
 }

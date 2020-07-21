@@ -1,14 +1,12 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
+@use 'variables/variables';
 @import '~@angular/material/theming';
-@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap');
 
 // Plus imports for other components in your app.
 
-$default-font-family: 'Hind Vadodara', sans-serif;
-
 $custom-typography: mat-typography-config(
-    $font-family: $default-font-family,
+    $font-family: variables.$fonts-default,
     $headline: mat-typography-level(32px, 48px, 700),
     $body-1: mat-typography-level(16px, 24px, 500),
 );
@@ -35,9 +33,6 @@ $habemus-frontend-theme: mat-light-theme($habemus-frontend-primary, $habemus-fro
 @include angular-material-theme($habemus-frontend-theme);
 
 @mixin _mat-sidenav-overrides($palette) {
-    * {
-        font-family: $default-font-family;
-    }
     .mat-nav-list.mat-list-base {
         padding-top: 0px !important;
     }
