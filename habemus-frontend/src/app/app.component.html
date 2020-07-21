@@ -1,9 +1,16 @@
 <mat-sidenav-container autosize>
   <mat-sidenav #sidenav class="sidenav" [mode]="mode" [opened]="opened">
     <mat-nav-list>
-      <md-card-avatar>
-        <img src="https://api.adorable.io/avatars/285/abott@adorable.png" class="md-user-avatar" />
-      </md-card-avatar>
+      <mat-grid-list cols="1">
+        <div class="center mv-2">
+          <app-avatar [size]="64"></app-avatar>
+        </div>
+        <div class="center bold mv-1">Danny Rottstegge</div>
+        <div class="center">
+          <small>Danny</small>
+        </div>
+      </mat-grid-list>
+
       <a mat-list-item routerLinkActive="active" [routerLink]="'/'">
         <mat-icon>home</mat-icon>
         Home

@@ -13,9 +13,11 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './pages/home/home.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { NavComponent } from './components/nav/nav.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, CalendarComponent, NavComponent],
+    declarations: [AppComponent, HomeComponent, CalendarComponent, NavComponent, AvatarComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
@@ -26,6 +28,7 @@ import { NavComponent } from './components/nav/nav.component';
         MatButtonModule,
         MatSidenavModule,
         MatListModule,
+        MatGridListModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
