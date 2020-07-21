@@ -1,7 +1,7 @@
 <mat-toolbar [ngClass]="'app-navbar'">
   <mat-toolbar-row>
-    <button (click)="onMenuClick()" mat-icon-button *ngIf="showAlwaysMenuButton || mode == 'over'">
-      <span class="fas fa-bars"></span>
+    <button mat-icon-button *ngIf="showAlwaysMenuButton || mode == 'over'">
+      <mat-icon (click)="onMenuClick()">menu</mat-icon>
     </button>
     <span class="app-navbar-spacer"></span>
     <button mat-icon-button>
