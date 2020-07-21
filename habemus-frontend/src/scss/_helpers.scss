@@ -1,0 +1,64 @@
+.text-center,
+div.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.shadow-bottom {
+    box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+        0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+}
+
+$base-spacing: 5px;
+@for $i from 0 through 10 {
+    .m-#{$i} {
+        margin: $base-spacing * $i;
+    }
+    .mb-#{$i} {
+        margin-bottom: $base-spacing * $i;
+    }
+    .mt-#{$i} {
+        margin-top: $base-spacing * $i;
+    }
+    .ml-#{$i} {
+        margin-left: $base-spacing * $i;
+    }
+    .mr-#{$i} {
+        margin-right: $base-spacing * $i;
+    }
+    .mh-#{$i} {
+        @extend .ml-#{$i};
+        @extend .mr-#{$i};
+    }
+    .mv-#{$i} {
+        @extend .mt-#{$i};
+        @extend .mb-#{$i};
+    }
+
+    .p-#{$i} {
+        padding: $base-spacing * $i;
+    }
+    .pb-#{$i} {
+        padding-bottom: $base-spacing * $i;
+    }
+    .pt-#{$i} {
+        padding-top: $base-spacing * $i;
+    }
+    .pl-#{$i} {
+        padding-left: $base-spacing * $i;
+    }
+    .pr-#{$i} {
+        padding-right: $base-spacing * $i;
+    }
+    .ph-#{$i} {
+        @extend .pl-#{$i};
+        @extend .pr-#{$i};
+    }
+    .pv-#{$i} {
+        @extend .pt-#{$i};
+        @extend .pb-#{$i};
+    }
+}

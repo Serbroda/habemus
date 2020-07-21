@@ -1,0 +1,65 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap');
+
+// Plus imports for other components in your app.
+
+$default-font-family: 'Hind Vadodara', sans-serif;
+
+$custom-typography: mat-typography-config(
+    $font-family: $default-font-family,
+    $headline: mat-typography-level(32px, 48px, 700),
+    $body-1: mat-typography-level(16px, 24px, 500),
+);
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core($custom-typography);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$habemus-frontend-primary: mat-palette($mat-indigo);
+$habemus-frontend-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$habemus-frontend-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$habemus-frontend-theme: mat-light-theme($habemus-frontend-primary, $habemus-frontend-accent, $habemus-frontend-warn);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($habemus-frontend-theme);
+
+@mixin _mat-sidenav-overrides($palette) {
+    * {
+        font-family: $default-font-family;
+    }
+    .mat-nav-list.mat-list-base {
+        padding-top: 0px !important;
+    }
+
+    .mat-nav-list {
+        & a.mat-list-item {
+            border-bottom: 1px solid #eaeaea;
+        }
+        & .mat-icon {
+        }
+    }
+}
+
+@include _mat-sidenav-overrides($habemus-frontend-primary);
+
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($custom-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($custom-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);
+
+/* You can add global styles to this file, and also import other style files */
