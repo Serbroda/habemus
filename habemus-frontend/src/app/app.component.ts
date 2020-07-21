@@ -10,7 +10,7 @@ import { MatDrawerMode } from '@angular/material/sidenav';
 export class AppComponent {
     title = 'habemus-frontend';
     mode: MatDrawerMode = 'side';
-    opened: boolean = true;
+    opened = true;
 
     constructor(private breakpointObserver: BreakpointObserver) {
         this.breakpointObserver.observe(['(max-width: 769px)']).subscribe((state: BreakpointState) => {

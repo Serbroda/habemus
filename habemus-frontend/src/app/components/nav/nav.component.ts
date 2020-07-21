@@ -2,24 +2,21 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDrawerMode } from '@angular/material/sidenav';
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss'],
+    selector: 'app-nav',
+    templateUrl: './nav.component.html',
+    styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-  @Input() mode: MatDrawerMode = 'side';
-  @Input() hasShadow: boolean = false;
-  @Output() menuClick = new EventEmitter();
+    @Input() mode: MatDrawerMode = 'side';
+    @Input() hasShadow = false;
+    @Input() showAlwaysMenuButton = false;
+    @Output() menuClick = new EventEmitter();
 
-  constructor() {}
+    constructor() {}
 
-  ngOnInit(): void {}
+    ngOnInit(): void {}
 
-  ngAfterViewInit() {
-    console.log('hasShadow:', this.hasShadow);
-  }
-
-  onMenuClick() {
-    this.menuClick.emit();
-  }
+    onMenuClick() {
+        this.menuClick.emit();
+    }
 }
