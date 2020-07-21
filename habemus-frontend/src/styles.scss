@@ -12,3 +12,21 @@ body {
 .fas {
     font-size: variables.$fonts-font-awesome-font-size;
 }
+
+.app-page {
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.app-page-header {
+    margin-bottom: 48px;
+}
+
+.app-page-header-title {
+    margin-bottom: 0.5rem;
+}
+.app-page-header-subtitle {
+    padding: 0px;
+    margin: 0px;
+}

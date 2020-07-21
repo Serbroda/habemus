@@ -15,6 +15,7 @@ import { CalendarComponent } from './pages/calendar/calendar.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
     declarations: [AppComponent, HomeComponent, CalendarComponent, NavComponent, AvatarComponent],
@@ -29,6 +30,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
         MatSidenavModule,
         MatListModule,
         MatGridListModule,
+        MatCardModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

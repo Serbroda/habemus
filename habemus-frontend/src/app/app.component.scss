@@ -2,7 +2,9 @@
 
 .app-content {
     height: 100%;
-    padding: 0px + variables.$navbar-height 10px;
+    padding-top: 0px + variables.$navbar-height;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .sidenav {

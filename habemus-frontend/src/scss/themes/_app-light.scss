@@ -61,6 +61,25 @@ $habemus-frontend-theme: mat-light-theme($habemus-frontend-primary, $habemus-fro
         background-color: variables.$colors-navbar-bg;
         color: functions.text-color-on-bg(variables.$colors-navbar-bg);
     }
+
+    .app-content:before {
+        width: 100%;
+        height: 264px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #153d77;
+        content: ' ';
+        z-index: -99;
+    }
+
+    .app-page-header {
+        color: functions.text-color-on-bg(variables.$colors-navbar-bg);
+    }
+
+    .mat-drawer-container {
+        background-color: variables.$colors-body-bg;
+    }
 }
 
 @include _mat-sidenav-overrides($habemus-frontend-primary);
