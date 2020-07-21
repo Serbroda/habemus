@@ -1,7 +1,8 @@
 @use "../scss/variables/variables";
 
 .app-content {
-    height: 100%;
+    $nh: variables.$navbar-height;
+    min-height: calc(100% - #{$nh});
     padding-top: 0px + variables.$navbar-height;
     padding-left: 24px;
     padding-right: 24px;

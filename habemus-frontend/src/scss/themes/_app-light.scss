@@ -78,6 +78,7 @@ $habemus-frontend-theme: mat-light-theme($habemus-frontend-primary, $habemus-fro
     }
 
     .mat-drawer-container {
+        height: 100%;
         background-color: variables.$colors-body-bg;
     }
 }
