@@ -4,14 +4,11 @@
 .app-navbar {
     min-height: variables.$navbar-height;
     height: variables.$navbar-height;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 998;
 
     /* Shadow*/
     @extend .shadow-bottom;
+    position: relative;
+    z-index: 4;
 }
 
 .app-navbar-spacer {
