@@ -32,4 +32,8 @@ export class AppComponent {
             }
         });
     }
+
+    onOpenChange(val: any) {
+        this.opened = val;
+    }
 }

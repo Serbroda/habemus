@@ -1,5 +1,12 @@
 <mat-sidenav-container autosize>
-  <mat-sidenav #sidenav class="sidenav" [mode]="mode" [opened]="opened">
+  <mat-sidenav
+    #sidenav
+    class="sidenav"
+    [mode]="mode"
+    [opened]="opened"
+    (openedStart)="onOpenChange(true)"
+    (closedStart)="onOpenChange(false)"
+  >
     <mat-nav-list>
       <div class="sidenav-header">
         <p class="p-3 m-0">Habemus le Clubé</p>
@@ -27,7 +34,13 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <app-nav [hasShadow]="true" [showAlwaysMenuButton]="false" [mode]="mode" (menuClick)="sidenav.toggle()"></app-nav>
+    <app-nav
+      [hasShadow]="true"
+      [showAlwaysMenuButton]="true"
+      [opened]="opened"
+      [mode]="mode"
+      (menuClick)="sidenav.toggle()"
+    ></app-nav>
 
     <div class="app-content">
       <router-outlet></router-outlet>

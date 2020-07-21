@@ -8,6 +8,7 @@ import { MatDrawerMode } from '@angular/material/sidenav';
 })
 export class NavComponent implements OnInit {
     @Input() mode: MatDrawerMode = 'side';
+    @Input() opened;
     @Input() hasShadow = false;
     @Input() showAlwaysMenuButton = false;
     @Output() menuClick = new EventEmitter();
