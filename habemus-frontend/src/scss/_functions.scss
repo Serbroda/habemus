@@ -1,0 +1,10 @@
+@use 'sass:color';
+@use 'variables/colors';
+
+@function text-color-on-bg($bg-color) {
+    @if color.lightness($bg-color) > 70 {
+        @return colors.$font-dark;
+    } @else {
+        @return colors.$font-light;
+    }
+}

@@ -1,6 +1,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use 'src/scss/variables/variables';
+@use 'src/scss/functions';
 @import '~@angular/material/theming';
 
 $app-default-typography: mat-typography-config(
@@ -48,9 +49,22 @@ $habemus-frontend-theme: mat-light-theme($habemus-frontend-primary, $habemus-fro
     .mat-drawer-side {
         border-right: 0px solid transparent;
     }
+
+    .sidenav-header {
+        background-color: variables.$colors-sidenav-header-bg;
+        color: functions.text-color-on-bg(variables.$colors-sidenav-header-bg);
+    }
+}
+
+@mixin _mat-navbar-overrides($palette) {
+    .mat-toolbar {
+        background-color: variables.$colors-navbar-bg;
+        color: functions.text-color-on-bg(variables.$colors-navbar-bg);
+    }
 }
 
 @include _mat-sidenav-overrides($habemus-frontend-primary);
+@include _mat-navbar-overrides($habemus-frontend-primary);
 
 // Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
 @include mat-base-typography($app-default-typography);

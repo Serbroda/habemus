@@ -1,12 +1,13 @@
 @use "../scss/variables/variables";
 
 .app-content {
-    height: calc(100vh - 86px);
-    padding: 0px 10px;
+    height: 100%;
+    padding: 0px + variables.$navbar-height 10px;
 }
 
 .sidenav {
-    min-width: 280px;
+    min-width: variables.$sidenav-width;
+    position: fixed;
 }
 
 .mat-nav-list a.active {
