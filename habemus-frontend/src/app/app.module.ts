@@ -20,6 +20,15 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { SidenavItemComponent } from './components/sidenav-item/sidenav-item.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import listPlugin from '@fullcalendar/list';
+
+FullCalendarModule.registerPlugins([
+    // register FullCalendar plugins
+    dayGridPlugin,
+    listPlugin,
+]);
 
 @NgModule({
     declarations: [AppComponent, HomeComponent, CalendarComponent, NavComponent, AvatarComponent, SidenavItemComponent],
@@ -38,6 +47,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
         MatExpansionModule,
         MatBadgeModule,
         MatSnackBarModule,
+        FullCalendarModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

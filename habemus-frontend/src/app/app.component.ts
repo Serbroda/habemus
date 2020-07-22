@@ -36,4 +36,9 @@ export class AppComponent {
     onOpenChange(val: any) {
         this.opened = val;
     }
+
+    onMenuClick() {
+        this.sidenav.toggle();
+        setTimeout(() => window.dispatchEvent(new Event('resize')), 300);
+    }
 }

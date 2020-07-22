@@ -101,13 +101,6 @@ $habemus-frontend-theme: mat-light-theme($habemus-frontend-primary, $habemus-fro
     .sidenav-header {
         font-family: variables.$fonts-pacifico;
     }
-
-    @media (max-width: 769px) {
-        .app-content {
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-    }
 }
 
 @include _mat-sidenav-overrides($habemus-frontend-primary);
