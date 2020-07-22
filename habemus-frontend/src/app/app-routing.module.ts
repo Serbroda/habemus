@@ -5,12 +5,17 @@ import { CalendarComponent } from './pages/calendar/calendar.component';
 
 const routes: Routes = [
     {
-        path: '',
+        path: 'home',
         component: HomeComponent,
     },
     {
         path: 'calendar',
         component: CalendarComponent,
+    },
+    {
+        path: '**',
+        redirectTo: 'home',
+        pathMatch: 'full',
     },
 ];
 
