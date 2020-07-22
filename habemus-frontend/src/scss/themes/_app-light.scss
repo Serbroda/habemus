@@ -39,21 +39,21 @@ $habemus-frontend-theme: mat-light-theme($habemus-frontend-primary, $habemus-fro
     }
 
     .mat-nav-list {
-        /*& a.mat-list-item {
-            border-bottom: 1px solid #eaeaea;
-        }*/
-        & a.mat-list-item {
+        .app-sidenav-item {
             color: #153d77;
-            width: variables.$sidenav-width - 16px;
+            width: variables.$sidenav-width - 16px !important;
             margin-left: 8px;
             margin-top: 4px;
             margin-bottom: 4px;
         }
 
-        & a.mat-list-item.active {
-            color: #212529;
+        .app-sidenav-item.active {
             background-color: #e9ecef;
             border-radius: 0.2rem;
+
+            a {
+                color: #212529;
+            }
         }
     }
 

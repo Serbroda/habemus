@@ -1,0 +1,7 @@
+<mat-list-item routerLinkActive="active" class="app-sidenav-item">
+  <a [routerLink]="route" class="app-sidenav-item left">
+    <span *ngIf="icon" class="fas mr-2" [class]="'fa-' + icon"></span>
+    {{ title }}
+  </a>
+  <span *ngIf="badge" class="right" [matBadge]="badge" matBadgeOverlap="true"></span>
+</mat-list-item>

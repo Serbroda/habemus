@@ -22,14 +22,9 @@
         </div>
       </mat-grid-list>
 
-      <a mat-list-item routerLinkActive="active" [routerLink]="'/home'">
-        <span class="fas fa-home mr-2"></span>
-        Home
-      </a>
-      <a mat-list-item routerLinkActive="active" [routerLink]="'/calendar'">
-        <span class="fas fa-calendar mr-2"></span>
-        Termine
-      </a>
+      <app-sidenav-item [route]="'/home'" [title]="'Dashboard'" [icon]="'home'"></app-sidenav-item>
+      <app-sidenav-item [route]="'/events'" [title]="'Termine'" [icon]="'calendar'"></app-sidenav-item>
+      <app-sidenav-item [route]="'/games'" [title]="'Spiele'" [icon]="'dice'"></app-sidenav-item>
     </mat-nav-list>
   </mat-sidenav>
 

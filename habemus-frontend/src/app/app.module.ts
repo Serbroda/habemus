@@ -16,9 +16,12 @@ import { NavComponent } from './components/nav/nav.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { SidenavItemComponent } from './components/sidenav-item/sidenav-item.component';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, CalendarComponent, NavComponent, AvatarComponent],
+    declarations: [AppComponent, HomeComponent, CalendarComponent, NavComponent, AvatarComponent, SidenavItemComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
@@ -31,6 +34,8 @@ import { MatCardModule } from '@angular/material/card';
         MatListModule,
         MatGridListModule,
         MatCardModule,
+        MatExpansionModule,
+        MatBadgeModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
