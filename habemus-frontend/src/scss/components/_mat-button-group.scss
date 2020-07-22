@@ -1,0 +1,13 @@
+.mat-button-group > :first-child {
+    border-bottom-right-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
+.mat-button-group > :last-child {
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+}
+
+.mat-button-group > :not(:first-child):not(:last-child) {
+    border-radius: 0px !important;
+}
