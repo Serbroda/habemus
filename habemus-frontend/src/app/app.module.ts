@@ -11,7 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './pages/home/home.component';
-import { CalendarComponent } from './pages/calendar/calendar.component';
+import { CalendarPageComponent } from './pages/calendar-page/calendar-page.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -23,6 +23,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import listPlugin from '@fullcalendar/list';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 FullCalendarModule.registerPlugins([
     // register FullCalendar plugins
@@ -31,7 +32,15 @@ FullCalendarModule.registerPlugins([
 ]);
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, CalendarComponent, NavComponent, AvatarComponent, SidenavItemComponent],
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        CalendarPageComponent,
+        NavComponent,
+        AvatarComponent,
+        SidenavItemComponent,
+        CalendarComponent,
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,

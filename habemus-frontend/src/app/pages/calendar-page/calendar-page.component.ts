@@ -5,10 +5,10 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
     selector: 'app-calendar',
-    templateUrl: './calendar.component.html',
-    styleUrls: ['./calendar.component.scss'],
+    templateUrl: './calendar-page.component.html',
+    styleUrls: ['./calendar-page.component.scss'],
 })
-export class CalendarComponent implements OnInit, AfterViewInit {
+export class CalendarPageComponent implements OnInit, AfterViewInit {
     @ViewChild('calendar') calendar: FullCalendarComponent;
     events: any[] = [
         { title: 'Kegeln', date: '2020-06-01' },

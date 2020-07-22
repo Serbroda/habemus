@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { CalendarComponent } from './pages/calendar/calendar.component';
+import { CalendarPageComponent } from './pages/calendar-page/calendar-page.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
@@ -16,7 +16,7 @@ const routes: Routes = [
         children: [
             {
                 path: 'events',
-                component: CalendarComponent,
+                component: CalendarPageComponent,
             },
         ],
     },
