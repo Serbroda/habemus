@@ -24,6 +24,9 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import listPlugin from '@fullcalendar/list';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { CalendarDialogComponent } from './dialogs/calendar-dialog/calendar-dialog.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
 
 FullCalendarModule.registerPlugins([
     // register FullCalendar plugins
@@ -40,6 +43,7 @@ FullCalendarModule.registerPlugins([
         AvatarComponent,
         SidenavItemComponent,
         CalendarComponent,
+        CalendarDialogComponent,
     ],
     imports: [
         BrowserModule,
@@ -57,6 +61,8 @@ FullCalendarModule.registerPlugins([
         MatBadgeModule,
         MatSnackBarModule,
         FullCalendarModule,
+        MatInputModule,
+        MatDialogModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
