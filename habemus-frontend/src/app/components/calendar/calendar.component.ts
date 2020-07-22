@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { CalendarOptions, formatDayString, FullCalendarComponent } from '@fullcalendar/angular';
 import deLocale from '@fullcalendar/core/locales/de';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
@@ -10,19 +10,11 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 })
 export class CalendarComponent implements AfterViewInit {
     @ViewChild('calendar') calendar: FullCalendarComponent;
-    events: any[] = [
-        { title: 'Kegeln', date: '2020-06-01' },
-        {
-            title: 'Kegeln',
-            date: formatDayString(new Date()),
-        },
-        {
-            title: 'Kegeln2',
-            date: formatDayString(new Date()),
-        },
-    ];
+    @Input() events: any[] = [];
+    @Input() viewType = 'dayGridMonth';
+
     calendarOptions: CalendarOptions = {
-        initialView: 'dayGridMonth',
+        initialView: this.viewType,
         initialDate: formatDayString(new Date()),
         locale: deLocale,
         events: this.events,
@@ -31,7 +23,6 @@ export class CalendarComponent implements AfterViewInit {
             right: 'prev,next',
             center: 'addEventButton',
         },
-        weekNumbers: true,
         customButtons: {
             addEventButton: {
                 text: 'Add',
@@ -42,12 +33,15 @@ export class CalendarComponent implements AfterViewInit {
         },
     };
 
-    constructor(private breakpointObserver: BreakpointObserver) {
-        console.log(formatDayString(new Date()));
-    }
+    constructor(private breakpointObserver: BreakpointObserver) {}
 
     ngAfterViewInit() {
-        this.breakpointObserver.observe(['(max-width: 769px)']).subscribe((state: BreakpointState) => {
+        this.calendarOptions.events = this.events;
+        if (this.calendarOptions.initialView !== this.viewType) {
+            this.calendarOptions.initialView = this.viewType;
+            this.calendar.getApi().changeView(this.calendarOptions.initialView);
+        }
+        /*this.breakpointObserver.observe(['(max-width: 769px)']).subscribe((state: BreakpointState) => {
             if (state.matches) {
                 this.calendarOptions.initialView = 'listYear';
             } else {
@@ -55,6 +49,6 @@ export class CalendarComponent implements AfterViewInit {
             }
             this.calendar.getApi().changeView(this.calendarOptions.initialView);
             setTimeout(() => this.calendar.getApi().updateSize(), 400);
-        });
+        });*/
     }
 }
