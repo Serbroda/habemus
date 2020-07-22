@@ -20,8 +20,8 @@ export class CalendarComponent implements AfterViewInit {
         events: this.events,
         editable: true,
         headerToolbar: {
-            right: 'prev,next',
-            center: 'addEventButton',
+            right: '',
+            center: '',
         },
         customButtons: {
             addEventButton: {
