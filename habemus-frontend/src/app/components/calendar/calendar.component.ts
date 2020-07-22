@@ -2,6 +2,8 @@ import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/cor
 import { CalendarOptions, formatDayString, FullCalendarComponent } from '@fullcalendar/angular';
 import deLocale from '@fullcalendar/core/locales/de';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { MatDialog } from '@angular/material/dialog';
+import { CalendarDialogComponent } from '../../dialogs/calendar-dialog/calendar-dialog.component';
 
 @Component({
     selector: 'app-calendar',
@@ -19,6 +21,9 @@ export class CalendarComponent implements AfterViewInit {
         locale: deLocale,
         events: this.events,
         editable: true,
+        eventClick: (info: any) => {
+            this.openDialog();
+        },
         headerToolbar: {
             right: '',
             center: '',
@@ -33,7 +38,7 @@ export class CalendarComponent implements AfterViewInit {
         },
     };
 
-    constructor(private breakpointObserver: BreakpointObserver) {}
+    constructor(private breakpointObserver: BreakpointObserver, private dialog: MatDialog) {}
 
     ngAfterViewInit() {
         this.calendarOptions.events = this.events;
@@ -50,5 +55,17 @@ export class CalendarComponent implements AfterViewInit {
             this.calendar.getApi().changeView(this.calendarOptions.initialView);
             setTimeout(() => this.calendar.getApi().updateSize(), 400);
         });*/
+    }
+
+    openDialog() {
+        const dialogRef = this.dialog.open(CalendarDialogComponent, {
+            width: '250px',
+            data: '',
+        });
+
+        dialogRef.afterClosed().subscribe((result) => {
+            console.log('The dialog was closed');
+            alert('Closed');
+        });
     }
 }

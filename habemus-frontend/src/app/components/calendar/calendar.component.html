@@ -1,24 +1,20 @@
 <div>
   <full-calendar #calendar [options]="calendarOptions"></full-calendar>
 
-  <div class="row between-md mt-2">
-    <div class="col-md-6">
-      <div class="box">
-        <button mat-raised-button color="primary">
-          <span class="fas fa-plus"></span>
-        </button>
-      </div>
+  <div class="calendar-actionbar mt-3" style="display: inline-block; width: 100%;">
+    <div style="float: left;">
+      <button mat-raised-button color="primary" (click)="openDialog()">
+        <span class="fas fa-plus"></span>
+      </button>
     </div>
-    <div class="col-md-6">
-      <div class="box">
-        <div class="mat-button-group" style="float: right;">
-          <button mat-raised-button color="primary" (click)="calendar.getApi().prev()">
-            <span class="fas fa-angle-left"></span>
-          </button>
-          <button mat-raised-button color="primary" (click)="calendar.getApi().next()">
-            <span class="fas fa-angle-right"></span>
-          </button>
-        </div>
+    <div style="float: right;">
+      <div class="mat-button-group">
+        <button mat-raised-button color="primary" (click)="calendar.getApi().prev()">
+          <span class="fas fa-angle-left"></span>
+        </button>
+        <button mat-raised-button color="primary" (click)="calendar.getApi().next()">
+          <span class="fas fa-angle-right"></span>
+        </button>
       </div>
     </div>
   </div>
