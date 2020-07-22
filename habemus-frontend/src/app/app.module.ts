@@ -19,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { SidenavItemComponent } from './components/sidenav-item/sidenav-item.component';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [AppComponent, HomeComponent, CalendarComponent, NavComponent, AvatarComponent, SidenavItemComponent],
@@ -36,6 +37,7 @@ import { MatBadgeModule } from '@angular/material/badge';
         MatCardModule,
         MatExpansionModule,
         MatBadgeModule,
+        MatSnackBarModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

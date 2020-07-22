@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
     {
@@ -9,8 +10,15 @@ const routes: Routes = [
         component: HomeComponent,
     },
     {
-        path: 'events',
-        component: CalendarComponent,
+        path: '',
+        runGuardsAndResolvers: 'always',
+        canActivate: [AuthGuard],
+        children: [
+            {
+                path: 'events',
+                component: CalendarComponent,
+            },
+        ],
     },
     {
         path: '**',
