@@ -25,10 +25,7 @@ export class CalendarComponent implements AfterViewInit {
         eventClick: (info: any) => {
             this.openDialog();
         },
-        headerToolbar: {
-            right: '',
-            center: '',
-        },
+        headerToolbar: {},
         customButtons: {
             addEventButton: {
                 text: 'Add',
