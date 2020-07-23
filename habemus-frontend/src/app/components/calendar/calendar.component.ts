@@ -4,6 +4,7 @@ import deLocale from '@fullcalendar/core/locales/de';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { MatDialog } from '@angular/material/dialog';
 import { CalendarDialogComponent } from '../../dialogs/calendar-dialog/calendar-dialog.component';
+import { CalendarEvent } from '../../models/CalendarEvent';
 
 @Component({
     selector: 'app-calendar',
@@ -12,7 +13,7 @@ import { CalendarDialogComponent } from '../../dialogs/calendar-dialog/calendar-
 })
 export class CalendarComponent implements AfterViewInit {
     @ViewChild('calendar') calendar: FullCalendarComponent;
-    @Input() events: any[] = [];
+    @Input() events: CalendarEvent[][] = [];
     @Input() viewType = 'dayGridMonth';
 
     calendarOptions: CalendarOptions = {
