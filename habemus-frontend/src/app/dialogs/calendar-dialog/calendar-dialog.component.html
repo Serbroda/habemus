@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Add Event</h1>
+<h1 mat-dialog-title>{{ mode === 'edit' ? 'Edit' : 'Add' }} Event</h1>
 <div mat-dialog-content>
   <p>
     <mat-form-field>
@@ -7,15 +7,25 @@
     </mat-form-field>
   </p>
   <section class="example-section mb-5">
-    <mat-checkbox class="example-margin" [(ngModel)]="allDay">Check me!</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="_data.allDay">All day</mat-checkbox>
   </section>
-  <mat-form-field>
-    <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date" />
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <ngx-mat-datetime-picker #picker [hideTime]="allDay"></ngx-mat-datetime-picker>
-  </mat-form-field>
+  <p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="_data.start" [ngxMatDatetimePicker]="fromPicker" placeholder="From" disabled />
+      <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+      <ngx-mat-datetime-picker #fromPicker [hideTime]="_data.allDay" disabled="false"></ngx-mat-datetime-picker>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="_data.end" [ngxMatDatetimePicker]="toPicker" placeholder="To" disabled />
+      <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+      <ngx-mat-datetime-picker #toPicker [hideTime]="_data.allDay" [disabled]="_data.allDay"></ngx-mat-datetime-picker>
+    </mat-form-field>
+  </p>
 </div>
-<div mat-dialog-actions>
-  <button mat-raised-button color="primary" [mat-dialog-close]="_data">Add</button>
-  <button mat-raised-button color="warn" (click)="dialogRef.close()">Cancel</button>
+<div mat-dialog-actions style="float: right;">
+  <button mat-raised-button color="primary" [mat-dialog-close]="_data">Save</button>
+  <button *ngIf="mode === 'edit'" mat-raised-button color="warn" (click)="dialogRef.close()">Delete</button>
+  <button mat-raised-button (click)="dialogRef.close()">Cancel</button>
 </div>

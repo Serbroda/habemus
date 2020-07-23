@@ -1,12 +1,11 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CalendarEvent } from '../../models/CalendarEvent';
-import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
-import { MAT_MOMENT_DATE_ADAPTER_OPTIONS, MomentDateAdapter } from '@angular/material-moment-adapter';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+// @ts-ignore
 import * as _moment from 'moment';
 // @ts-ignore
 import { default as _rollupMoment } from 'moment';
-import { FormControl } from '@angular/forms';
 import { NGX_MAT_DATE_FORMATS, NgxMatDateAdapter } from '@angular-material-components/datetime-picker';
 import { NGX_MAT_MOMENT_DATE_ADAPTER_OPTIONS, NgxMatMomentAdapter } from '@angular-material-components/moment-adapter';
 import 'moment/locale/de';
@@ -45,15 +44,27 @@ export const MY_FORMATS = {
     ],
 })
 export class CalendarDialogComponent implements OnInit {
-    allDay = false;
+    from: Date;
+    to: Date | undefined;
     _data: CalendarEvent;
+    mode: 'new' | 'edit';
 
     constructor(
         public dialogRef: MatDialogRef<CalendarDialogComponent>,
         @Inject(MAT_DIALOG_DATA) public data: CalendarEvent
     ) {
-        this._data = data ? data : { title: '' };
+        this.mode = data ? 'edit' : 'new';
+        this._data = data ? data : { title: '', allDay: true };
     }
 
     ngOnInit(): void {}
+
+    private createZeroTimeDate(base?: Date): Date {
+        const d = base ? base : new Date();
+        d.setHours(0);
+        d.setMinutes(0);
+        d.setSeconds(0);
+        d.setMilliseconds(0);
+        return d;
+    }
 }

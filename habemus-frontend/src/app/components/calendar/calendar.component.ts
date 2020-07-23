@@ -1,10 +1,8 @@
-import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
 import { CalendarOptions, formatDayString, FullCalendarComponent } from '@fullcalendar/angular';
 import deLocale from '@fullcalendar/core/locales/de';
-import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { MatDialog } from '@angular/material/dialog';
-import { CalendarDialogComponent } from '../../dialogs/calendar-dialog/calendar-dialog.component';
-import { CalendarEvent } from '../../models/CalendarEvent';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { CalendarEvent, fromEventApi } from '../../models/CalendarEvent';
 import { DialogService } from '../../services/dialog.service';
 
 @Component({
@@ -24,7 +22,7 @@ export class CalendarComponent implements AfterViewInit {
         events: this.events,
         editable: true,
         eventClick: (info: any) => {
-            this.openDialog();
+            this.openDialog(fromEventApi(info.event));
         },
         headerToolbar: {
             right: 'prev,next',
@@ -58,9 +56,9 @@ export class CalendarComponent implements AfterViewInit {
         });*/
     }
 
-    openDialog() {
+    openDialog(event?: CalendarEvent) {
         this.dialogService
-            .openCalendarDialogComponent()
+            .openCalendarDialogComponent(event)
             .subscribe((result: any) => console.log('Dialog result', result));
     }
 }

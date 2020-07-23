@@ -1,6 +1,5 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CalendarComponent } from '../../components/calendar/calendar.component';
-import { formatDayString } from '@fullcalendar/angular';
 import { CalendarEvent } from '../../models/CalendarEvent';
 
 @Component({
@@ -11,14 +10,14 @@ import { CalendarEvent } from '../../models/CalendarEvent';
 export class CalendarPageComponent implements OnInit {
     @ViewChild('calendar') calendar: CalendarComponent;
     events: CalendarEvent[] = [
-        { title: 'Kegeln', date: '2020-06-01' },
         {
             title: 'Kegeln',
-            date: formatDayString(new Date()),
+            start: new Date(),
+            allDay: true,
         },
         {
             title: 'Kegeln2',
-            date: formatDayString(new Date()),
+            start: new Date(),
         },
     ];
 
