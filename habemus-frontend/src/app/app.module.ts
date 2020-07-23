@@ -33,6 +33,7 @@ import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-mat
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { NgxMatMomentModule } from '@angular-material-components/moment-adapter';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 
 FullCalendarModule.registerPlugins([
     // register FullCalendar plugins
@@ -77,6 +78,7 @@ FullCalendarModule.registerPlugins([
         NgxMatMomentModule,
         ReactiveFormsModule,
         MatNativeDateModule,
+        MatSelectModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
