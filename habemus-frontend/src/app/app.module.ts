@@ -28,7 +28,10 @@ import { CalendarDialogComponent } from './dialogs/calendar-dialog/calendar-dial
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { NgxMatMomentModule } from '@angular-material-components/moment-adapter';
 
 FullCalendarModule.registerPlugins([
     // register FullCalendar plugins
@@ -67,6 +70,11 @@ FullCalendarModule.registerPlugins([
         MatDialogModule,
         MatCheckboxModule,
         FormsModule,
+        NgxMatDatetimePickerModule,
+        NgxMatTimepickerModule,
+        MatDatepickerModule,
+        NgxMatMomentModule,
+        ReactiveFormsModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
