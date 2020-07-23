@@ -59,16 +59,8 @@ export class CalendarComponent implements AfterViewInit {
     }
 
     openDialog() {
-        /*const dialogRef = this.dialog.open(CalendarDialogComponent, {
-            data: '',
-        });
-
-        dialogRef.afterClosed().subscribe((result) => {
-            console.log('The dialog was closed');
-            alert('Closed');
-        });*/
-        this.dialogService.openCalendarDialogComponent().subscribe((result: any) => {
-            alert('Closed');
-        });
+        this.dialogService
+            .openCalendarDialogComponent()
+            .subscribe((result: any) => console.log('Dialog result', result));
     }
 }
