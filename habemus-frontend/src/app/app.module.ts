@@ -27,6 +27,8 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { CalendarDialogComponent } from './dialogs/calendar-dialog/calendar-dialog.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
 
 FullCalendarModule.registerPlugins([
     // register FullCalendar plugins
@@ -63,6 +65,8 @@ FullCalendarModule.registerPlugins([
         FullCalendarModule,
         MatInputModule,
         MatDialogModule,
+        MatCheckboxModule,
+        FormsModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
