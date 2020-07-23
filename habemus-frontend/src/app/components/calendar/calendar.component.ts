@@ -25,7 +25,9 @@ export class CalendarComponent implements AfterViewInit {
         eventClick: (info: any) => {
             this.openDialog();
         },
-        headerToolbar: {},
+        headerToolbar: {
+            right: 'prev,next',
+        },
         customButtons: {
             addEventButton: {
                 text: 'Add',
@@ -57,7 +59,6 @@ export class CalendarComponent implements AfterViewInit {
 
     openDialog() {
         const dialogRef = this.dialog.open(CalendarDialogComponent, {
-            width: '250px',
             data: '',
         });
 
