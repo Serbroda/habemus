@@ -5,6 +5,7 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { MatDialog } from '@angular/material/dialog';
 import { CalendarDialogComponent } from '../../dialogs/calendar-dialog/calendar-dialog.component';
 import { CalendarEvent } from '../../models/CalendarEvent';
+import { DialogService } from '../../services/dialog.service';
 
 @Component({
     selector: 'app-calendar',
@@ -38,7 +39,7 @@ export class CalendarComponent implements AfterViewInit {
         },
     };
 
-    constructor(private breakpointObserver: BreakpointObserver, private dialog: MatDialog) {}
+    constructor(private breakpointObserver: BreakpointObserver, private dialogService: DialogService) {}
 
     ngAfterViewInit() {
         this.calendarOptions.events = this.events;
@@ -58,12 +59,15 @@ export class CalendarComponent implements AfterViewInit {
     }
 
     openDialog() {
-        const dialogRef = this.dialog.open(CalendarDialogComponent, {
+        /*const dialogRef = this.dialog.open(CalendarDialogComponent, {
             data: '',
         });
 
         dialogRef.afterClosed().subscribe((result) => {
             console.log('The dialog was closed');
+            alert('Closed');
+        });*/
+        this.dialogService.openCalendarDialogComponent().subscribe((result: any) => {
             alert('Closed');
         });
     }
