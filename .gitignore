@@ -359,6 +359,10 @@ Cargo.lock
 .history
 .ionide
 
+### NextJS ###
+# Next build dir
+.next/
+
 # Support for Project snippet scope
 
 ### WebStorm+all ###
