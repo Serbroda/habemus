@@ -2,8 +2,15 @@ import type {NextPage} from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Navigation from "./components/Navigation";
+import useSWR from 'swr';
+
+const fetcher = (url: string) => fetch('http://127.0.0.1:3001' + url).then((res) => res.json());
+const fetcher_text = (url: string) => fetch('http://127.0.0.1:3001' + url).then((res) => res.text());
 
 const Home: NextPage = () => {
+    const {data: greet, error: greetError} = useSWR("/api/greet/danny", fetcher);
+    const {data: version, error: verionError} = useSWR("/api/version_info", fetcher_text);
+
     return (
         <div className="min-h-screen bg-gray-100">
             <Head>
@@ -14,6 +21,9 @@ const Home: NextPage = () => {
 
             <Navigation/>
             <h1>Hello NextJs</h1>
+
+            <p>{greet ? greet.name : 'no-data'}</p>
+            <p>Version: {version || '??'}</p>
 
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16}/>
         </div>

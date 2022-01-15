@@ -2,6 +2,7 @@ use dotenv::dotenv;
 use std::env;
 
 pub struct Config {
+    pub mode: String,
     pub port: String,
     pub context_path: String,
 }
@@ -20,6 +21,7 @@ impl Config {
         let context_path = get_value_with_default("CONTEXT_PATH", "".to_string());
 
         Config {
+            mode: get_value_with_default("MODE", "dev".to_string()),
             port: get_value_with_default("PORT", "8080".to_string()),
             context_path: if context_path.eq("/") {
                 "".to_string()
