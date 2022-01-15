@@ -1,14 +1,23 @@
-use actix_web::{get, App, HttpResponse, HttpServer, Responder};
+mod config;
+mod controllers;
 
-#[get("/")]
-async fn hello() -> impl Responder {
-    HttpResponse::Ok().body("Hello world!")
-}
+use actix_web::{App, HttpServer};
+
+use crate::config::Config;
+use crate::controllers::default::home;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    HttpServer::new(|| {App::new().service(hello)})
-        .bind("127.0.0.1:8080")?
+    let config = Config::load_env();
+    let bind_address = format!("127.0.0.1:{}", config.port);
+
+    println!(
+        "started server on {}, url: http://{}",
+        bind_address, bind_address
+    );
+
+    HttpServer::new(|| App::new().service(home))
+        .bind(bind_address)?
         .run()
         .await
 }

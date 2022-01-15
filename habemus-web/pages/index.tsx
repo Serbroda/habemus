@@ -1,6 +1,7 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Navigation from "./components/Navigation";
 
 const Home: NextPage = () => {
     return (
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
+            <Navigation/>
             <h1>Hello NextJs</h1>
 
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16}/>
