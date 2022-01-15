@@ -1,11 +1,22 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
-import { PlusSmIcon } from '@heroicons/react/solid'
-import {classNames} from "@utils/DomUtils";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { PlusSmIcon } from "@heroicons/react/solid";
+import { classNames } from "@utils/dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Fragment, ReactElement } from "react";
+
+const routes: { href: string; content: string | ReactElement }[] = [
+    { href: "/", content: "Home" },
+    { href: "/calendar", content: "Calendar" },
+];
 
 export default function Navigation() {
+    const router = useRouter();
+
+    const isRouteActive = (href: string) => router.asPath === href;
+
     return (
         <Disclosure as="nav" className="bg-white shadow">
             {({ open }) => (
@@ -38,30 +49,20 @@ export default function Navigation() {
                                 </div>
                                 <div className="hidden md:ml-6 md:flex md:space-x-8">
                                     {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                                    <a
-                                        href="#"
-                                        className="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                                    >
-                                        Dashboard
-                                    </a>
-                                    <a
-                                        href="#"
-                                        className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                                    >
-                                        Team
-                                    </a>
-                                    <a
-                                        href="#"
-                                        className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                                    >
-                                        Projects
-                                    </a>
-                                    <a
-                                        href="#"
-                                        className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                                    >
-                                        Calendar
-                                    </a>
+                                    {routes.map((route, idx) => (
+                                        <Link key={idx} href={route.href}>
+                                            <a
+                                                className={classNames(
+                                                    "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
+                                                    isRouteActive(route.href)
+                                                        ? "border-indigo-500 text-gray-900"
+                                                        : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700",
+                                                )}
+                                            >
+                                                {route.content}
+                                            </a>
+                                        </Link>
+                                    ))}
                                 </div>
                             </div>
                             <div className="flex items-center">
@@ -110,8 +111,8 @@ export default function Navigation() {
                                                         <a
                                                             href="#"
                                                             className={classNames(
-                                                                active ? 'bg-gray-100' : '',
-                                                                'block px-4 py-2 text-sm text-gray-700'
+                                                                active ? "bg-gray-100" : "",
+                                                                "block px-4 py-2 text-sm text-gray-700",
                                                             )}
                                                         >
                                                             Your Profile
@@ -123,8 +124,8 @@ export default function Navigation() {
                                                         <a
                                                             href="#"
                                                             className={classNames(
-                                                                active ? 'bg-gray-100' : '',
-                                                                'block px-4 py-2 text-sm text-gray-700'
+                                                                active ? "bg-gray-100" : "",
+                                                                "block px-4 py-2 text-sm text-gray-700",
                                                             )}
                                                         >
                                                             Settings
@@ -136,8 +137,8 @@ export default function Navigation() {
                                                         <a
                                                             href="#"
                                                             className={classNames(
-                                                                active ? 'bg-gray-100' : '',
-                                                                'block px-4 py-2 text-sm text-gray-700'
+                                                                active ? "bg-gray-100" : "",
+                                                                "block px-4 py-2 text-sm text-gray-700",
                                                             )}
                                                         >
                                                             Sign out
@@ -155,34 +156,21 @@ export default function Navigation() {
                     <Disclosure.Panel className="md:hidden">
                         <div className="pt-2 pb-3 space-y-1">
                             {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
-                            <Disclosure.Button
-                                as="a"
-                                href="#"
-                                className="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
-                            >
-                                Dashboard
-                            </Disclosure.Button>
-                            <Disclosure.Button
-                                as="a"
-                                href="#"
-                                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
-                            >
-                                Team
-                            </Disclosure.Button>
-                            <Disclosure.Button
-                                as="a"
-                                href="#"
-                                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
-                            >
-                                Projects
-                            </Disclosure.Button>
-                            <Disclosure.Button
-                                as="a"
-                                href="#"
-                                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
-                            >
-                                Calendar
-                            </Disclosure.Button>
+                            {routes.map((route, idx) => (
+                                <Disclosure.Button
+                                    key={idx}
+                                    href={route.href}
+                                    as="a"
+                                    className={classNames(
+                                        "block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6",
+                                        isRouteActive(route.href)
+                                            ? "bg-indigo-50 border-indigo-500 text-indigo-700"
+                                            : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700",
+                                    )}
+                                >
+                                    {route.content}
+                                </Disclosure.Button>
+                            ))}
                         </div>
                         <div className="pt-4 pb-3 border-t border-gray-200">
                             <div className="flex items-center px-4 sm:px-6">
@@ -233,5 +221,5 @@ export default function Navigation() {
                 </>
             )}
         </Disclosure>
-    )
+    );
 }

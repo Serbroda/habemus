@@ -1,7 +1,8 @@
 const API_URL = 'http://127.0.0.1:3001';
 
-const fetcher = async (url: string) => {
-    fetch('http://127.0.0.1:3001' + url).then(async res => await res.text())
-}
+const getUrl = (url: string): string => `${API_URL.replace(/$\//, '')}/${url.replace(/^\//, '')}`
 
-export default fetcher;
+const fetcher = (url: string) => fetch(getUrl(url)).then((res) => res.json());
+const fetcherText = (url: string) => fetch(getUrl(url)).then((res) => res.text());
+
+export {fetcher, fetcherText};
